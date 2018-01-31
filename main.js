@@ -123,7 +123,7 @@ function aiturn(board, depth, player) {
       var newBoard = board.slice();
       newBoard[x] = value;
 
-      var moveval = aiturn(newBoard, depth + 1, !player);
+      var moveval = -aiturn(newBoard, depth + 1, !player);
 
       if (moveval > max) {
         max = moveval;
